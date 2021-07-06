@@ -1,6 +1,31 @@
 .header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 7fr 2fr;
+    grid-template-rows: 80px 45px;
+    height: 125px;
+    grid-template-areas: "logo . nav social"
+                          "contacts . . form";
   &__top {
-    padding: 24px 0;
+    // padding: 24px 0;
     background-color: #202020;
   }
+  &__logo {
+    grid-area: logo;
+  }
+  &__nav {
+    grid-area: nav;
+  }
+  &__social {
+    grid-area: social;
+  }
+  &__contacts {
+    grid-area: contacts;
+  }
+  &__form {
+    grid-area: form;
+  }
+}
+
+.nav {
+
 }

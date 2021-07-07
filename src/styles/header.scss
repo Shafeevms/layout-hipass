@@ -13,15 +13,19 @@
     grid-area: logo;
   }
   &__nav {
+    background-color: saddlebrown;
     grid-area: nav;
   }
   &__social {
+    background-color: sandybrown;
     grid-area: social;
   }
   &__contacts {
+    background-color: seagreen;
     grid-area: contacts;
   }
   &__form {
+    background-color: violet;
     grid-area: form;
   }
 }

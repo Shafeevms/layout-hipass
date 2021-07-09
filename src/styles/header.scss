@@ -1,12 +1,10 @@
 .header {
-    display: grid;
-    grid-template-columns: 2fr 1fr 7fr 2fr;
-    grid-template-rows: 80px 45px;
-    height: 125px;
-    grid-template-areas: "logo . nav social"
-                          "contacts . . form";
   &__top {
+    display: grid;
     // padding: 24px 0;
+    grid-template-columns: 2fr 1fr 7fr 2fr;
+    height: 80px;
+    grid-template-areas: "logo . nav social";
     background-color: #202020;
   }
   &__logo {
@@ -21,11 +19,26 @@
   &__contacts {
     grid-area: contacts;
   }
-  &__form {
+  &__search {
     grid-area: form;
+  }
+  &__bottom {
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    height: 45px;
+    grid-template-areas: "contacts . form";
+  }
+}
+
+.social {
+  &__list {
+    display: flex;
   }
 }
 
 .nav {
+  &__list {
+    display: flex;
+  }
 
 }

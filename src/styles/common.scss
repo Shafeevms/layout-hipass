@@ -25,4 +25,7 @@ a {
 .container {
   margin: 0 auto;
   max-width: 1290px;
+  @media screen and (max-width: 1300px) {
+    max-width: 1024px;
+  }
 }

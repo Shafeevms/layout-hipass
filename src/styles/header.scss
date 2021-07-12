@@ -4,17 +4,23 @@
 
 .header {
   &__top {
-    height: 80px;
     background-color: #202020;
     @media screen and (max-width: 1300px) {
       padding-top: 3px;
       padding-left: 31px;
       padding-right: 31px;
     }
+    @media screen and (max-width: 620px) {
+      padding-top: 0;
+      padding-left: 21px;
+      padding-right: 21px;
+      padding-bottom: 7px;
+    }
   }
   &__container {
     display: grid;
-    padding: 24px 0;
+    padding-top: 24px;
+    padding-bottom: 20px;
     grid-template-columns: 2fr 1fr 7fr 2fr;
     grid-template-areas: "logo . nav social";
     @media screen and (max-width: 1300px) {
@@ -22,16 +28,25 @@
       grid-template-areas: "logo nav social";
     }
     @media screen and (max-width: 1000px) {
-      grid-template-columns: 166px 2fr 237px 25px;
+      grid-template-columns: 166px minmax(100px, 2fr) 227px 25px;
       grid-template-areas: "logo . contacts-768 btn-search";
+    }
+    @media screen and (max-width: 620px) {
+      grid-template-columns: minmax(111px, 166px) minmax(100px, 2fr) 25px;
+      grid-template-areas: "logo . btn-search";
     }
   }
   &__container-bottom {
     display: grid;
-    grid-template-columns: 2fr 8fr 2fr;
+    grid-template-columns: 3fr 7fr minmax(240px, 2fr);
     grid-template-areas: "contacts . form";
-    @media screen and (max-width: 1300px) {
-      grid-template-columns: 2fr 4fr 2fr;
+    @media screen and (max-width: 1000px) {
+      grid-template-columns: 100%;
+      grid-template-areas: "nav";
+    }
+    @media screen and (max-width: 620px) {
+      grid-template-columns: 20px minmax(70px, 100%) 163px;
+      grid-template-areas: "burger . contacts";
     }
   }
   &__logo {
@@ -39,10 +54,22 @@
     @media screen and (max-width: 1300px) {
       width: 166px;
     }
+    @media screen and (max-width: 620px) {
+      width: 111px;
+    }
   }
   &__nav {
     grid-area: nav;
     @media screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+  &__nav-768 {
+    display: none;
+    @media screen and (max-width: 1000px) {
+      display: block;
+    }
+    @media screen and (max-width: 620px) {
       display: none;
     }
   }
@@ -56,6 +83,15 @@
     padding-top: 4px;
     grid-area: contacts;
     color: #fff;
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+    @media screen and (max-width: 620px) {
+      display: block;
+      color: #CE4307;
+      font-size: 14px;
+      padding-top: 0;
+    }
   }
   &__contacts:focus {
     color: #FF6E30;
@@ -75,23 +111,36 @@
       align-items: center;
       color: #FF6E30;
     }
+    @media screen and (max-width: 620px) {
+      display: none;
+    }
   }
   &__search {
-    padding-left: 18px;
+    justify-self: end;
     grid-area: form;
     @media screen and (max-width: 1300px) {
       padding-left: 0;
       justify-self: end;
     }
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
   }
   &__bottom {
-    padding: 10px 0;
-    height: 45px;
     background-color: #4A4A4A;
     @media screen and (max-width: 1300px) {
       padding-top: 9px;
       padding-left: 31px;
       padding-right: 31px;
+      padding-bottom: 5px;
+    }
+    @media screen and (max-width: 1000px) {
+      padding: 13px 24px;
+    }
+    @media screen and (max-width: 620px) {
+      padding-left: 21px;
+      padding-right: 21px;
+      padding-bottom: 6px;
     }
   }
   &__btn {
@@ -118,6 +167,10 @@
     cursor: pointer;
     transition: all 0.4s ease;
     object-fit: cover;
+    }
+    @media screen and (max-width: 620px) {
+    width: 20px;
+    height: 20px;
     }
   }
   &__btn:hover {
@@ -158,6 +211,29 @@
       font-size: 16px;
     }
   }
+  &__burger {
+    display: none;
+    grid-area: burger;
+    @media screen and (max-width: 620px) {
+      display: block;
+      position: relative;
+      width: 23px;
+      height: 23px;
+      border: none;
+      background-color: transparent;
+    }
+  }
+  &__burger-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__svg-320 {
+    @media screen and (max-width: 620px) {
+      height: 20px;
+      width: 20px;
+    }
+  }
 }
 
 .social {
@@ -190,6 +266,9 @@
   &__list {
     display: flex;
     justify-content: center;
+    @media screen and (max-width: 1000px) {
+      justify-content: space-between;
+    }
   }
   &__item:not(:last-child) {
     margin-right: 75px;
@@ -228,5 +307,11 @@
     white-space: pre;
     transform: translateX(-8px);
     color: inherit;
+    @media screen and (max-width: 1300px) {
+      font-size: 14px;
+    }
+    @media screen and (max-width: 620px) {
+      letter-spacing: 0.4px;
+    }
   }
 }

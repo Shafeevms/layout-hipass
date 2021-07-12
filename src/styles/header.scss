@@ -38,9 +38,15 @@
   }
   &__nav {
     grid-area: nav;
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
   }
   &__social {
     grid-area: social;
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
   }
   &__contacts {
     padding-top: 4px;

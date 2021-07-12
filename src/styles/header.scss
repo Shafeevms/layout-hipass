@@ -21,6 +21,10 @@
       grid-template-columns: 215px 565px 2fr;
       grid-template-areas: "logo nav social";
     }
+    @media screen and (max-width: 1000px) {
+      grid-template-columns: 166px 2fr 237px 25px;
+      grid-template-areas: "logo . contacts-768 btn-search";
+    }
   }
   &__container-bottom {
     display: grid;
@@ -63,6 +67,15 @@
     color: #fff;
     background-color: #BC572B;
   }
+  &__contacts-768 {
+    grid-area: contacts-768;
+    display: none;
+    @media screen and (max-width: 1000px) {
+      display: flex;
+      align-items: center;
+      color: #FF6E30;
+    }
+  }
   &__search {
     padding-left: 18px;
     grid-area: form;
@@ -91,6 +104,21 @@
     background-color: transparent;
     cursor: pointer;
     transition: all 0.4s ease;
+  }
+  &__btn-768 {
+    display: none;
+    @media screen and (max-width: 1000px) {
+    display: block;
+    grid-area: btn-search;
+    height: 25px;
+    width: 25px;
+    border: none;
+    color: #cacaca;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    object-fit: cover;
+    }
   }
   &__btn:hover {
     transform:scale(1.5);

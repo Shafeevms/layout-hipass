@@ -29,3 +29,16 @@ a {
     max-width: 1024px;
   }
 }
+
+@mixin orange_btn {
+  padding: 15px 22px;
+  background-color: #FF6E30;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@mixin secondFont {
+  font-family: 'TT Firs Neue', sans-serif;
+}

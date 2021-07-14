@@ -11,31 +11,34 @@ const css = () => {
   .pipe(sourcemaps.init())
   .pipe(sass().on('error', sass.logError))
   .pipe(sourcemaps.write())
-  .pipe(dest('./dist'))
-  .pipe(browserSync.stream());
+  .pipe(dest('dist'));
 };
 
 const html = () => {
   return src('src/*.html')
-    .pipe(dest('./dist'))
-    .pipe(browserSync.stream());
+    .pipe(dest('dist'));
 };
 
 const watchFiles = () => {
   browserSync.init({
     server: {
-      baseDir: './dist'
+      baseDir: 'dist'
     }
   })
 };
 
-const resources = () => {
+const img = () => {
   return src('./src/img/**')
     .pipe(dest('./dist/img'))
 };
 
-watch('src/**/*.scss', css);
-watch('src/img', resources);
-watch('src/*.html', html);
+const fonts = () => {
+  return src('./src/styles/fonts/**')
+    .pipe(dest('./dist/fonts'))
+};
 
-exports.default = series(css, html, resources, watchFiles);
+watch('src/scss/**/*.scss', css);
+watch('src/img', img);
+watch('src/*html')
+
+exports.default = series(fonts, css, html, img, watchFiles);

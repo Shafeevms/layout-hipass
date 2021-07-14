@@ -27,18 +27,13 @@ const watchFiles = () => {
   })
 };
 
-const img = () => {
-  return src('./src/img/**')
-    .pipe(dest('./dist/img'))
-};
-
-const fonts = () => {
-  return src('./src/styles/fonts/**')
-    .pipe(dest('./dist/fonts'))
+const resources = () => {
+  return src('./src/public/**')
+    .pipe(dest('./dist/public'))
 };
 
 watch('src/scss/**/*.scss', css);
-watch('src/img', img);
-watch('src/*html')
+watch('src/public', resources);
+watch('src/*html');
 
-exports.default = series(fonts, css, html, img, watchFiles);
+exports.default = series(resources, css, html, watchFiles);

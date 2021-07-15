@@ -8,6 +8,7 @@
                         "masterclass masterclass img3 img4";
   &__title {
     margin: 0;
+    display: inline-block;
     grid-area: title;
     @include secondFont;
     font-size: 24px;
@@ -17,7 +18,6 @@
   &__masterclass {
     grid-area: masterclass;
   }
-  // &__img {fff}
   &__img2 {
     grid-area: img2;
     object-fit: cover;

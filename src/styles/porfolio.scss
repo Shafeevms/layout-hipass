@@ -1,26 +1,34 @@
 .portfolio {
   padding: 40px 0;
   display: grid;
-  grid-template: 25px 300px 257px / repeat(4, 1fr);
-  gap: 25px 30px;
-  grid-template-areas: "masterclass masterclass title title"
-                        "masterclass masterclass img2 img2"
+  // grid-template: 350px 257px / 2fr minmax(156px, 1fr) minmax(156px, 1fr);
+  grid-template-columns: 1fr 1fr minmax(156px, 1fr) minmax(156px, 1fr);
+  grid-template-rows: 350px 257px;
+  gap: 30px;
+  grid-template-areas: "masterclass masterclass img2 img2"
                         "masterclass masterclass img3 img4";
   &__title {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 25px;
     display: inline-block;
-    grid-area: title;
     @include secondFont;
     font-size: 24px;
     font-weight: 700;
     justify-self: start;
   }
   &__masterclass {
+    width: 100%;
     grid-area: masterclass;
   }
-  &__img2 {
+  &__wrapper {
     grid-area: img2;
+  }
+  &__img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
+  }
+  &__img2 {
   }
   &__img3 {
     grid-area: img3;

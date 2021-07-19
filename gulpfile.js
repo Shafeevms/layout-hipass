@@ -32,8 +32,8 @@ const resources = () => {
     .pipe(dest('./dist/public'))
 };
 
-watch('src/scss/**/*.scss', css);
-watch('src/public', resources);
-watch('src/*html');
+watch('./src/styles/*.scss', css);
+watch('./src/public', resources);
+watch('./src/*html');
 
 exports.default = series(resources, css, html, watchFiles);

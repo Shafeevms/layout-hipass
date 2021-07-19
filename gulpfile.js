@@ -11,18 +11,18 @@ const css = () => {
   .pipe(sourcemaps.init())
   .pipe(sass().on('error', sass.logError))
   .pipe(sourcemaps.write())
-  .pipe(dest('dist'));
+  .pipe(dest('./dist'));
 };
 
 const html = () => {
-  return src('src/*.html')
-    .pipe(dest('dist'));
+  return src('./src/*.html')
+    .pipe(dest('./dist'));
 };
 
 const watchFiles = () => {
   browserSync.init({
     server: {
-      baseDir: 'dist'
+      baseDir: './dist'
     }
   })
 };
@@ -34,6 +34,6 @@ const resources = () => {
 
 watch('./src/styles/*.scss', css);
 watch('./src/public', resources);
-watch('./src/*html');
+watch('./src/*.html', html);
 
 exports.default = series(resources, css, html, watchFiles);

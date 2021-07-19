@@ -1,20 +1,54 @@
 .portfolio {
   padding: 40px 0;
   display: grid;
-  // grid-template: 350px 257px / 2fr minmax(156px, 1fr) minmax(156px, 1fr);
   grid-template-columns: 1fr 1fr minmax(156px, 1fr) minmax(156px, 1fr);
   grid-template-rows: 350px 257px;
-  gap: 30px;
+  gap: 23px 30px;
   grid-template-areas: "masterclass masterclass img2 img2"
                         "masterclass masterclass img3 img4";
+  @media screen and (max-width: 1300px) {
+    padding: 40px 31px;
+    grid-template-rows: 407px 186px;
+  }
+  @media screen and (max-width: 1300px) {
+    padding: 40px 31px;
+    grid-template-rows: 407px 186px;
+  }
+  @media screen and (max-width: 1000px) {
+    padding: 40px 26px;
+    grid-template-rows: 297px 133px;
+  }
+  @media screen and (max-width: 700px) {
+    padding: 40px 21px;
+    gap: 32px 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 422px 240px 200px;
+    grid-template-areas: "masterclass masterclass"
+                         "img2 img2"
+                         "img3 img4";
+  }
   &__title {
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 16px;
     display: inline-block;
     @include secondFont;
     font-size: 24px;
     font-weight: 700;
     justify-self: start;
+    @media screen and (max-width: 1300px) {
+      margin-bottom: 28px;
+      line-height: 20px;
+    }
+    @media screen and (max-width: 1000px) {
+      margin-bottom: 17px;
+      font-size: 22px;
+      line-height: 22px;
+    }
+    @media screen and (max-width: 700px) {
+      margin-bottom: 16px;
+      font-size: 18px;
+      line-height: 18px;
+    }
   }
   &__masterclass {
     width: 100%;
@@ -27,8 +61,23 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+    @media screen and (max-width: 1300px) {
+      height: 100%;
+    }
+    @media screen and (max-width: 320px) {
+      height: 105px;
+    }
   }
   &__img2 {
+    @media screen and (max-width: 1300px) {
+      height: 332px;
+    }
+    @media screen and (max-width: 1000px) {
+      height: 228px;
+    }
+    @media screen and (max-width: 700px) {
+      height: 186px;
+    }
   }
   &__img3 {
     grid-area: img3;
@@ -39,12 +88,30 @@
 }
 
 .masterclass {
-  padding: 405px 60px 60px;
+  padding-top: 405px;
+  padding-bottom: 60px;
+  padding-left: 60px;
+  padding-right: 10px;
   position: relative;
   background-color: rgb(19, 10, 80);
   color: #fff;
   background: url('./public/img/portfolio/portfolio1.webp') no-repeat;
   background-size: cover;
+  @media screen and (max-width: 1300px) {
+    padding-top: 422px;
+    padding-left: 29px;
+    padding-right: 7px;
+  }
+  @media screen and (max-width: 1000px) {
+    padding-top: 225px;
+    padding-left: 29px;
+    padding-right: 7px;
+  }
+  @media screen and (max-width: 700px) {
+    padding-top: 234px;
+    padding-left: 29px;
+    padding-right: 7px;
+  }
   &__tag {
     padding: 7px 14px;
     position: absolute;
@@ -52,11 +119,30 @@
     right: 15px;
     background-color: #333;
     font-size: 14px;
+    @media screen and (max-width: 700px) {
+      font-size: 12px;
+    }
+    @media screen and (max-width: 320px) {
+      padding: 5px 8px;
+      top: 5px;
+      right: 5px;
+    }
   }
   &__author {
     margin: 0;
     margin-bottom: 3px;
+    font-size: 16px;
     font-weight: 400;
+    @media screen and (max-width: 1300px) {
+      margin-bottom: 6px;
+    }
+    @media screen and (max-width: 1000px) {
+      margin-bottom: 13px;
+    }
+    @media screen and (max-width: 700px) {
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
   }
   &__name {
     margin: 0;
@@ -64,7 +150,22 @@
     @include secondFont;
     font-size: 36px;
     font-weight: 700;
+    line-height: 38px;
     max-width: 427px;
+    @media screen and (max-width: 1300px) {
+      font-size: 34px;
+      line-height: 36px;
+    }
+    @media screen and (max-width: 1000px) {
+      margin-bottom: 22px;
+      font-size: 34px;
+      line-height: 32px;
+    }
+    @media screen and (max-width: 700px) {
+      margin-bottom: 15px;
+      font-size: 24px;
+      line-height: 25px;
+    }
   }
   &__btn {
     @include orange_btn;

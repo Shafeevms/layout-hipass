@@ -6,28 +6,33 @@
       padding-left: 31px;
       padding-right: 31px;
     }
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 680px) {
       padding-top: 0;
       padding-left: 21px;
       padding-right: 21px;
       padding-bottom: 7px;
+    }
+    @media screen and (max-width: 320px) {
+      padding-bottom: 0;
     }
   }
   &__container {
     display: grid;
     padding-top: 24px;
     padding-bottom: 23px;
-    grid-template-columns: 2fr 1fr 7fr 2fr;
+    grid-template-columns: 1fr 1fr 10fr 2fr;
     grid-template-areas: "logo . nav social";
     @media screen and (max-width: 1300px) {
-      grid-template-columns: 215px 565px 2fr;
+      padding-bottom: 20px;
+      grid-template-columns: 190px 600px 2fr;
       grid-template-areas: "logo nav social";
     }
     @media screen and (max-width: 1000px) {
+      padding-bottom: 27px;
       grid-template-columns: 166px minmax(100px, 2fr) 227px 25px;
       grid-template-areas: "logo . contacts-768 btn-search";
     }
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 680px) {
       grid-template-columns: minmax(111px, 166px) minmax(100px, 2fr) 25px;
       grid-template-areas: "logo . btn-search";
     }
@@ -40,8 +45,8 @@
       grid-template-columns: 100%;
       grid-template-areas: "nav";
     }
-    @media screen and (max-width: 620px) {
-      grid-template-columns: 20px minmax(70px, 100%) 163px;
+    @media screen and (max-width: 680px) {
+      grid-template-columns: 20px minmax(70px, 100%) 185px;
       grid-template-areas: "burger . contacts";
     }
   }
@@ -50,7 +55,7 @@
     @media screen and (max-width: 1300px) {
       width: 166px;
     }
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 680px) {
       width: 111px;
     }
   }
@@ -65,7 +70,7 @@
     @media screen and (max-width: 1000px) {
       display: block;
     }
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 680px) {
       display: none;
     }
   }
@@ -82,7 +87,7 @@
     @media screen and (max-width: 1000px) {
       display: none;
     }
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 680px) {
       display: block;
       color: #CE4307;
       font-size: 14px;
@@ -107,7 +112,7 @@
       align-items: center;
       color: #FF6E30;
     }
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 680px) {
       display: none;
     }
   }
@@ -135,7 +140,7 @@
     @media screen and (max-width: 1000px) {
       padding: 13px 24px;
     }
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 680px) {
       padding-left: 21px;
       padding-right: 21px;
       padding-bottom: 6px;
@@ -166,7 +171,7 @@
     transition: all 0.4s ease;
     object-fit: cover;
     }
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 680px) {
     width: 20px;
     height: 20px;
     }
@@ -212,7 +217,7 @@
   &__burger {
     display: none;
     grid-area: burger;
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 680px) {
       display: block;
       position: relative;
       width: 23px;
@@ -227,7 +232,7 @@
     left: 0;
   }
   &__svg-320 {
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 680px) {
       height: 20px;
       width: 20px;
     }
@@ -262,21 +267,25 @@
     padding-top: 3px;
   }
   &__list {
-    display: flex;
-    justify-content: center;
-    @media screen and (max-width: 1000px) {
-      justify-content: space-between;
-    }
-  }
-  &__item:not(:last-child) {
-    margin-right: 75px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(5, minmax(129px, 1fr));
     @media screen and (max-width: 1300px) {
-      margin-right: 28px;
+      grid-template-columns: repeat(5, minmax(123px, 1fr));
     }
   }
+  // &__item:not(:last-child) {
+  //   margin-right: 75px;
+  //   @media screen and (max-width: 1300px) {
+  //     margin-right: 28px;
+  //   }
+
   &__link {
     padding: 0 3px;
     @include secondFont;
+    @media screen and (max-width: 1300px) {
+      padding: 0;
+    }
   }
   &__link:link {
     color: #fff;
@@ -308,7 +317,7 @@
     @media screen and (max-width: 1300px) {
       font-size: 14px;
     }
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 680px) {
       letter-spacing: 0.4px;
     }
   }

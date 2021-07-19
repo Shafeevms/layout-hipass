@@ -1,0 +1,18 @@
+@mixin orange_btn {
+  @include secondFont;
+  padding: 15px 20px;
+  background-color: #FF6E30;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  @media screen and (max-width: 700px) {
+    padding: 12px 23px;
+    font-family: 'Roboto', serif;
+    font-size: 14px;
+  }
+}
+
+@mixin secondFont {
+  font-family: 'TT Firs Neue', sans-serif;
+}

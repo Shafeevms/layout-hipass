@@ -27,6 +27,9 @@
                          "img2 img2"
                          "img3 img4";
   }
+  @media screen and (max-width: 320px) {
+    grid-template-rows: 422px 240px 105px;
+  }
   &__title {
     margin-top: 0;
     margin-bottom: 16px;

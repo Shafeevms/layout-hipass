@@ -172,5 +172,15 @@
   }
   &__btn {
     @include orange_btn;
+    transition: background-color .3s ease;
+    &:hover {
+      background-color: #BC572B;
+    }
+    &:focus {
+      outline: 3px solid #CE4307;
+    }
+    &:active {
+      background-color: #CE4307;
+    }
   }
 }

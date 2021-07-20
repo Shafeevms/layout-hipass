@@ -134,11 +134,21 @@
     @include orange_btn;
     padding: 17px 21px;
     font-family: 'Roboto', serif;
+    transition: background-color .3s ease;
     @media screen and (max-width: 1300px) {
       padding: 17px 24px;
     }
     @media screen and (max-width: 320px) {
       padding: 12px 22px;
+    }
+    &:hover {
+      background-color: #BC572B;
+    }
+    &:focus {
+      outline: 3px solid #CE4307;
+    }
+    &:active {
+      background-color: #CE4307;
     }
   }
 }

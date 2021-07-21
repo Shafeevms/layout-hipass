@@ -31,7 +31,6 @@
     grid-template-rows: 422px 240px 105px;
   }
   &__title {
-    margin-top: 0;
     margin-bottom: 16px;
     display: inline-block;
     @include secondFont;
@@ -132,7 +131,6 @@
     }
   }
   &__author {
-    margin: 0;
     margin-bottom: 3px;
     font-size: 16px;
     font-weight: 400;
@@ -148,7 +146,6 @@
     }
   }
   &__name {
-    margin: 0;
     margin-bottom: 19px;
     @include secondFont;
     font-size: 36px;

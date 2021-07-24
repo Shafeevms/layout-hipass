@@ -99,6 +99,7 @@
   &__label {
     display: block;
     margin-bottom: 14px;
+    pointer-events: none;
     @include secondFont;
     font-size: 24px;
     color: #fff;
@@ -116,6 +117,15 @@
     background-color: #4A4A4A;
     border: none;
     color: #cacaca;
+    &:hover::-webkit-input-placeholder {
+      color: #FF6E30;
+    }
+    &:hover:-moz-placeholder {
+      color: #FF6E30;
+    }
+    &:focus {
+      outline: 1px solid #FF6E30;
+    }
     @media screen and (max-width: 1300px) {
       width: 342px;
     }

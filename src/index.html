@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./public/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -181,139 +182,142 @@
     </section>
     <section class="projects container">
       <h2 class="projects__title">Наши проекты</h2>
-      <ul class="projects__slider">
-        <li class="projects__slide slide">
-          <ul class="slide__list">
-            <li class="slide__item">
-              <div class="slide__img slide__img1">
-                <span class="slide__tag">#пейзаж</span>
+      <div class="projects__slider swiper-container">
+        <div class="swiper-wrapper">
+          <div class="projects__slide slide swiper-slide" data-hash="1">
+            <ul class="slide__list">
+              <li class="slide__item">
+                <div class="slide__img slide__img1">
+                  <span class="slide__tag">#пейзаж</span>
+                </div>
+                <p class="slide__text">
+                  Синтетически, смешаны с не уникальными данными до степени...
+                </p>
+                <span class="slide__date">16 июня</span>
+              </li>
+              <li class="slide__item">
+                <div class="slide__img slide__img2">
+                  <span class="slide__tag">#портрет</span>
+                </div>
+                <p class="slide__text">
+                  В своём стремлении улучшить опыт мы упускаем, что явные...
+                </p>
+                <span class="slide__date">28 мая</span>
+              </li>
+              <li class="slide__item">
+                <div class="slide__img slide__img3">
+                  <span class="slide__tag">#предмет</span>
+                </div>
+                <p class="slide__text">
+                  Равным образом, высокое качество позиционных...
+                </p>
+                <span class="slide__date">14 мая</span>
+              </li>
+            </ul>
+            <div class="slide__block-big slide__block-big1">
+              <span class="slide__tag">#fuji</span>
+              <span class="slide__date-white">9 апреля</span>
+              <h2 class="slide__title">Cемантический разбор</h2>
+              <p class="slide__description">В рамках спецификации современных стандартов, интерактивные прототипы</p>
+              <a href="#" class="slide__btn">О проекте</a>
+            </div>
+            <div class="slide__block-big slide__block-big2">
+              <span class="slide__tag">#проектзабвение</span>
+              <span class="slide__date-white">20 марта</span>
+              <h2 class="slide__title">Забвение</h2>
+              <p class="slide__description">
+                Играет важную роль в формировании глубокомысленных рассуждений
+              </p>
+              <a href="#" class="slide__btn">О проекте</a>
+            </div>
+            <div class="slide__block-middle1">
+              <div class="slide__middle-img slide__middle-img1">
+                <span class="slide__tag">#ретушь</span>
               </div>
               <p class="slide__text">
-                Синтетически, смешаны с не уникальными данными до степени...
+                Как принято считать, многие известные личности и по сей день остаются уделом либералов...
               </p>
-              <span class="slide__date">16 июня</span>
-            </li>
-            <li class="slide__item">
-              <div class="slide__img slide__img2">
+              <span class="slide__date">9 марта</span>
+            </div>
+            <div class="slide__block-middle2">
+              <div class="slide__middle-img slide__middle-img2">
                 <span class="slide__tag">#портрет</span>
               </div>
               <p class="slide__text">
-                В своём стремлении улучшить опыт мы упускаем, что явные...
+                С учётом сложившейся международной обстановки, новая модель организационной...
               </p>
-              <span class="slide__date">28 мая</span>
-            </li>
-            <li class="slide__item">
-              <div class="slide__img slide__img3">
-                <span class="slide__tag">#предмет</span>
+              <span class="slide__date">1 марта</span>
+            </div>
+          </div>
+          <div class="projects__slide slide swiper-slide" data-hash="2">
+            <div class="slide__block-big slide__block-big3">
+              <span class="slide__tag">#портрет</span>
+              <span class="slide__date-white">24 февраля</span>
+              <h2 class="slide__title">Спорная точка зрения</h2>
+              <p class="slide__description">
+                Ясность нашей позиции очевидна: убеждённость некоторых оппонентов
+              </p>
+              <a href="#" class="slide__btn">О проекте</a>
+            </div>
+            <div class="slide__block-middle">
+              <div class="slide__middle-img slide__middle-img3">
+                <span class="slide__tag">#ретушь</span>
               </div>
               <p class="slide__text">
-                Равным образом, высокое качество позиционных...
+                Идейные соображения высшего порядка, а также убеждённость некоторых оппонентов...
               </p>
-              <span class="slide__date">14 мая</span>
-            </li>
-          </ul>
-          <div class="slide__block-big slide__block-big1">
-            <span class="slide__tag">#fuji</span>
-            <span class="slide__date-white">9 апреля</span>
-            <h2 class="slide__title">Cемантический разбор</h2>
-            <p class="slide__description">В рамках спецификации современных стандартов, интерактивные прототипы</p>
-            <a href="#" class="slide__btn">О проекте</a>
-          </div>
-          <div class="slide__block-big slide__block-big2">
-            <span class="slide__tag">#проектзабвение</span>
-            <span class="slide__date-white">20 марта</span>
-            <h2 class="slide__title">Забвение</h2>
-            <p class="slide__description">
-              Играет важную роль в формировании глубокомысленных рассуждений
-            </p>
-            <a href="#" class="slide__btn">О проекте</a>
-          </div>
-          <div class="slide__block-middle1">
-            <div class="slide__middle-img slide__middle-img1">
-              <span class="slide__tag">#ретушь</span>
+              <span class="slide__date">20 февраля</span>
             </div>
-            <p class="slide__text">
-              Как принято считать, многие известные личности и по сей день остаются уделом либералов...
-            </p>
-            <span class="slide__date">9 марта</span>
-          </div>
-          <div class="slide__block-middle2">
-            <div class="slide__middle-img slide__middle-img2">
-              <span class="slide__tag">#портрет</span>
-            </div>
-            <p class="slide__text">
-              С учётом сложившейся международной обстановки, новая модель организационной...
-            </p>
-            <span class="slide__date">1 марта</span>
-          </div>
-        </li>
-        <li class="projects__slide slide slide-reverse">
-          <div class="slide__block-big slide__block-big3">
-            <span class="slide__tag">#портрет</span>
-            <span class="slide__date-white">24 февраля</span>
-            <h2 class="slide__title">Спорная точка зрения</h2>
-            <p class="slide__description">
-              Ясность нашей позиции очевидна: убеждённость некоторых оппонентов
-            </p>
-            <a href="#" class="slide__btn">О проекте</a>
-          </div>
-          <div class="slide__block-middle">
-            <div class="slide__middle-img slide__middle-img3">
-              <span class="slide__tag">#ретушь</span>
-            </div>
-            <p class="slide__text">
-              Идейные соображения высшего порядка, а также убеждённость некоторых оппонентов...
-            </p>
-            <span class="slide__date">20 февраля</span>
-          </div>
-          <div class="slide__block-middle">
-            <div class="slide__middle-img slide__middle-img4">
-              <span class="slide__tag">#портрет</span>
-            </div>
-            <p class="slide__text">
-              Прежде всего, повышение уровня гражданского сознания говорит о возможностях приоритизации...
-            </p>
-            <span class="slide__date">18 февраля</span>
-          </div>
-          <ul class="slide__list">
-            <li class="slide__item">
-              <div class="slide__img slide__img4">
-                <span class="slide__tag">#пейзаж</span>
-              </div>
-              <p class="slide__text">
-                Синтетически, смешаны с не уникальными данными до степени...
-              </p>
-              <span class="slide__date">16 июня</span>
-            </li>
-            <li class="slide__item">
-              <div class="slide__img slide__img5">
+            <div class="slide__block-middle">
+              <div class="slide__middle-img slide__middle-img4">
                 <span class="slide__tag">#портрет</span>
               </div>
               <p class="slide__text">
-                В своём стремлении улучшить опыт мы упускаем, что явные...
+                Прежде всего, повышение уровня гражданского сознания говорит о возможностях приоритизации...
               </p>
-              <span class="slide__date">28 мая</span>
-            </li>
-            <li class="slide__item">
-              <div class="slide__img slide__img6">
-                <span class="slide__tag">#предмет</span>
-              </div>
-              <p class="slide__text">
-                Равным образом, высокое качество позиционных...
-              </p>
-              <span class="slide__date">14 мая</span>
-            </li>
-          </ul>
-          <div class="slide__block-big slide__block-big4">
-            <span class="slide__tag">#проектджаз</span>
-            <span class="slide__date-white">2 февраля</span>
-            <h2 class="slide__title">Задания по разработке своевременного</h2>
-            <p class="slide__description">Повседневная практика показывает, что сложившаяся структура организации играет важную роль</p>
-            <a href="#" class="slide__btn">О проекте</a>
+              <span class="slide__date">18 февраля</span>
+            </div>
+            <ul class="slide__list">
+              <li class="slide__item">
+                <div class="slide__img slide__img4">
+                  <span class="slide__tag">#пейзаж</span>
+                </div>
+                <p class="slide__text">
+                  Синтетически, смешаны с не уникальными данными до степени...
+                </p>
+                <span class="slide__date">16 июня</span>
+              </li>
+              <li class="slide__item">
+                <div class="slide__img slide__img5">
+                  <span class="slide__tag">#портрет</span>
+                </div>
+                <p class="slide__text">
+                  В своём стремлении улучшить опыт мы упускаем, что явные...
+                </p>
+                <span class="slide__date">28 мая</span>
+              </li>
+              <li class="slide__item">
+                <div class="slide__img slide__img6">
+                  <span class="slide__tag">#предмет</span>
+                </div>
+                <p class="slide__text">
+                  Равным образом, высокое качество позиционных...
+                </p>
+                <span class="slide__date">14 мая</span>
+              </li>
+            </ul>
+            <div class="slide__block-big slide__block-big4">
+              <span class="slide__tag">#проектджаз</span>
+              <span class="slide__date-white">2 февраля</span>
+              <h2 class="slide__title">Задания по разработке своевременного</h2>
+              <p class="slide__description">Повседневная практика показывает, что сложившаяся структура организации
+                играет важную роль</p>
+              <a href="#" class="slide__btn">О проекте</a>
+            </div>
           </div>
-        </li>
-      </ul>
-      <div class="projects__pagination pagination">
+        </div>
+      </div>
+      <div class="projects__pagination pagination swiper-pagination">
         <ul class="pagination__list">
           <li class="pagination__item">1</li>
           <li class="pagination__item">2</li>
@@ -321,6 +325,27 @@
       </div>
     </section>
   </main>
+  <script src="./public/js/swiper-bundle.min.js"></script>
+  <script src="./public/js/swiper-bundle.min.js.map"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      direction: 'horizontal',
+      loop: true,
+      spaceBetween: 30,
+      hashNavigation: true,
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: 'custom',
+      },
+    });
+    // document.querySelector('.pagination').addEventListener('click', (e) => {
+    //   e.preventDefault();
+    //   console.log(e.target.textContent)
+    //   console.log(location.hash.slice(1))
+    // })
+  </script>
 </body>
 
 </html>

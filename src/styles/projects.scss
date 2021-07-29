@@ -164,6 +164,10 @@
   }
 }
 
+.swiper-pagination {
+  position: static;
+}
+
 .pagination {
   margin: 0 auto;
 
@@ -182,10 +186,4 @@
   &__item:not(:last-child) {
     margin-right: 34px;
   }
-}
-
-.slide-reverse {
-  // grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: 'big3 big3 middle3 middle4'
-                        'list2 list2 big4 big4';
 }

@@ -1,6 +1,10 @@
 .projects {
   padding-top: 40px;
   padding-bottom: 40px;
+  @media screen and (max-width: 1024px) {
+    padding-left: 31px;
+    padding-right: 31px;
+  }
   &__title {
     margin-bottom: 12px;
     @include secondFont;
@@ -16,18 +20,35 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 300px;
   gap: 30px;
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(8, 1fr);
+  }
   &__list {
     grid-column: 1 / 3;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 29px;
   }
+  &__list-add {
+    @media screen and (max-width: 1024px) {
+      grid-column: 1 / 9;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &__item-add {
+    display: none;
+    @media screen and (max-width: 1024px) {
+      display: block;
+    }
+  }
   &__img {
     position: relative;
     margin-bottom: 18px;
-    max-width: 190px;
+    max-width: 218px;
     height: 184px;
     background-color: #cacaca;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   &__img1 {
     background-image: url('../public/img/projects/pic3.webp');
@@ -70,11 +91,18 @@
   &__block-big1 {
     grid-column: 3 / 5;
     background: url('../public/img/projects/pic7.webp') no-repeat;
+    @media screen and (max-width:1024px) {
+      grid-column: 1 / 6;
+    }
   }
   &__block-big2 {
     grid-row: 2 / 3;
     grid-column: 1 / 3;
     background: url('../public/img/projects/pic6.webp') no-repeat;
+    @media screen and (max-width:1024px) {
+      grid-row: 3 / 4;
+      grid-column: 4 / 9;
+    }
   }
   &__block-big3 {
     grid-column: 1 / 3;
@@ -83,6 +111,16 @@
   &__block-big4 {
     grid-column: 3 / 5;
     background: url('../public/img/projects/pic13.webp');
+  }
+  &__block-middle1 {
+    @media screen and (max-width:1024px) {
+      grid-column: 6 / 9;
+    }
+  }
+  &__block-middle2 {
+    @media screen and (max-width:1024px) {
+      grid-column: 1 / 4;
+    }
   }
   &__date {
     font-size: 12px;
@@ -146,21 +184,23 @@
   &__middle-img {
     margin-bottom: 18px;
     position: relative;
-    max-width: 300px;
+    max-width: 331px;
     height: 184px;
     background-color: #cacaca;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   &__middle-img1 {
-    background: url('../public/img/projects/pic4.webp') no-repeat;
+    background-image: url('../public/img/projects/pic4.webp');
   }
   &__middle-img2 {
-    background: url('../public/img/projects/pic5.webp') no-repeat;
+    background-image: url('../public/img/projects/pic5.webp');
   }
   &__middle-img3 {
-    background: url('../public/img/projects/pic12.webp') no-repeat;
+    background-image: url('../public/img/projects/pic12.webp');
   }
   &__middle-img4 {
-    background: url('../public/img/projects/pic11.webp') no-repeat;
+    background-image: url('../public/img/projects/pic11.webp');
   }
 }
 

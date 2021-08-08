@@ -21,6 +21,10 @@
   padding-top: 32px;
   padding-bottom: 49px;
   background-color: #202020;
+  @media screen and (max-width: 320px) {
+    padding-top: 34px;
+    padding-bottom: 45px;
+  }
   &__studio {
     @media screen and (max-width: 740px) {
       order: 1;

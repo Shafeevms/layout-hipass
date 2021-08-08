@@ -1,15 +1,21 @@
 .projects {
-  padding-top: 40px;
+  position: relative;
+  padding-top: 34px;
   padding-bottom: 40px;
   @media screen and (max-width: 1024px) {
     padding-left: 31px;
     padding-right: 31px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding-left: 21px;
+    padding-right: 21px;
   }
   &__title {
     margin-bottom: 12px;
     @include secondFont;
     font-size: 24px;
     @media screen and (max-width: 676px) {
+      margin-bottom: 17px;
       font-size: 18px;
     }
   }
@@ -65,6 +71,14 @@
       grid-row: 1 / 2;
       grid-template-columns: repeat(3, 1fr);
     }
+    @media screen and (max-width: 676px) {
+      grid-column: 1;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 273px);
+    }
+  }
+  &__item {
+    position: relative;
   }
   &__item-add {
     display: none;
@@ -91,6 +105,7 @@
     background-color: #cacaca;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     @media screen and (max-width: 676px) {
       max-width: 276px;
       width: 100%;
@@ -121,6 +136,17 @@
       max-width: 276px;
     }
   }
+  &__text-list {
+    @media screen and (max-width: 1024px) {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+    @media screen and (max-width: 676px) {
+      -webkit-line-clamp: 2;
+    }
+  }
   &__tag {
     position: absolute;
     top: 7px;
@@ -129,6 +155,10 @@
     background-color: #333;
     color: #fff;
     font-size: 14px;
+    @media screen and (max-width: 676px) {
+      padding: 4px 13px;
+      font-size: 12px;
+    }
   }
   &__block-big {
     position: relative;
@@ -137,10 +167,15 @@
     padding-left: 30px;
     background-color: #cacaca;
     background-repeat: no-repeat;
+    background-position: center;
     height: 300px;
     background-size: cover;
     @media screen and (max-width: 676px) {
-      max-width: 276px;
+      padding-bottom: 88px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 278px;
       height: 422px;
     }
   }
@@ -171,8 +206,6 @@
     }
     @media screen and (max-width: 676px) {
       grid-row: 5 / 6;
-    }
-    @media screen and (max-width: 676px) {
       grid-column: 1;
     }
   }
@@ -187,6 +220,9 @@
       grid-row: 2 / 3;
       grid-column: 1 / 7;
     }
+    @media screen and (max-width: 676px) {
+      grid-column: 1;
+    }
   }
   &__block-big4 {
     grid-column: 3 / 5;
@@ -198,6 +234,10 @@
     @media screen and (max-width:768px) {
       grid-column: 1 / 7;
       grid-row: 4 / 5;
+    }
+    @media screen and (max-width: 676px) {
+      grid-column: 1;
+      grid-row: 5 / 6;
     }
   }
   &__block-middle1 {
@@ -230,6 +270,9 @@
     @media screen and (max-width:768px) {
       grid-column: 1 / 4;
     }
+    @media screen and (max-width: 676px) {
+      grid-column: 1;
+    }
   }
   &__block-middle4 {
     @media screen and (max-width:1024px) {
@@ -237,6 +280,10 @@
     }
     @media screen and (max-width:768px) {
       grid-column: 4 / 7;
+    }
+    @media screen and (max-width: 676px) {
+      grid-column: 1;
+      grid-row: 4 / 5;
     }
   }
   &__date {
@@ -254,6 +301,12 @@
     @media screen and (max-width: 676px) {
       width: 276px;
     }
+  }
+
+  &__date-list {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   &__date-white {
     margin-bottom: 7px;
@@ -279,6 +332,11 @@
     line-height: 22px;
     color: #fff;
     max-width: 292px;
+    @media screen and (max-width: 646px) {
+      line-height: 18px;
+      font-size: 14px;
+      max-width: 205px;
+    }
   }
   &__btn {
     position: absolute;
@@ -299,6 +357,10 @@
     &:active {
       background-color: #CE4307;
       border-color: transparent;
+    }
+    @media screen and (max-width: 676px) {
+      padding: 10px 18px;
+      font-size: 14px;
     }
   }
   &__middle-img {
@@ -326,11 +388,20 @@
 
 .swiper-pagination {
   position: static;
+  @media screen and (max-width: 676px) {
+    position: absolute;
+    top: 35px;
+    right: 20px;
+  }
 }
 
 .pagination {
   margin: 0 auto;
-
+  height: 30px;
+  width: 100px;
+  @media screen and (max-width: 676px) {
+    margin-right: 0;
+  }
   &__list {
     display: flex;
     justify-content: center;

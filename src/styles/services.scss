@@ -1,9 +1,11 @@
 $orange: #FF6E30;
+$yellow: #FFF500;
 
 .services {
   padding-top: 34px;
   padding-bottom: 40px;
   display: grid;
+  gap: 20px;
   grid-template-columns: 8fr 4fr;
   grid-template-areas: 'main aside';
   &__title {
@@ -13,6 +15,9 @@ $orange: #FF6E30;
   }
   &__main {
     grid-area: main;
+  }
+  &__aside {
+    grid-area: aside;
   }
   &__switcher {
     margin-bottom: 30px;
@@ -53,15 +58,30 @@ $orange: #FF6E30;
   }
   &__img {
     grid-column: 1 / 4;
+    @media screen and (max-width: 1350px) {
+      max-width: 240px;
+    }
   }
   &__wrapper {
+    padding-top: 20px;
     grid-column: 4 / 9;
   }
-  &__title {}
-  &__description {}
+  &__title {
+    margin-bottom: 5px;
+    color: #202020;
+    font-size: 24px;
+    font-weight: 400;
+    @include secondFont;
+  }
+  &__description {
+    margin-bottom: 11px;
+    color: #999;
+    line-height: 22px;
+  }
   &__link {
     position: relative;
     color: $orange;
+    font-weight: 700;
     &::after {
       content: url('../public/img/icons/arrow-short.png');
       position: absolute;
@@ -74,4 +94,79 @@ $orange: #FF6E30;
       }
     }
   }
+}
+
+.add-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  &__wrapper {
+    padding-top: 15px;
+  }
+  &__title {
+    margin-bottom: 5px;
+    color: #202020;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    @include secondFont;
+  }
+}
+
+.aside {
+  &__hero {
+    margin-bottom: 30px;
+    padding: 20px 30px 30px;
+    height: 490px;
+    background-image: url('../public/img/services/hero.webp');
+  }
+  &__title-yellow {
+    font-size: 36px;
+    font-weight: 700;
+    @include secondFont;
+    color: $yellow;
+  }
+  &__descr-yellow {
+    margin-bottom: 210px;
+    font-size: 22px;
+    font-weight: 700;
+    color: $yellow;
+  }
+  &__discount {
+    margin-bottom: 9px;
+  }
+  &__descr {
+    margin-bottom: 9px;
+    max-width: 218px;
+    color: #FFF;
+  }
+  &__btn {
+    display: inline-block;
+    @include orange_btn;
+  }
+  &__title {
+    margin-bottom: 12px;
+    font-size: 24px;
+    color: #202020;
+    @include secondFont;
+  }
+  &__list,
+  &__list-add {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  &__img {
+    width: 80px;
+    height: 60px;
+  }
+}
+
+.d-none {
+  display: none;
 }

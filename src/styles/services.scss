@@ -35,7 +35,7 @@ $yellow: #FFF500;
     padding-bottom: 10px;
     display: flex;
     justify-content: space-between;
-    width: 410px;
+    max-width: 410px;
     border-bottom: 4px solid #C4C4C4;
   }
   &__switcher_name {
@@ -220,6 +220,10 @@ $yellow: #FFF500;
     @media screen and (max-width: 1024px) {
       grid-template-columns: repeat(3, 1fr);
       gap: 21px 30px;
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(6, 1fr);
+      gap: 30px 29px;
     }
   }
   &__img {

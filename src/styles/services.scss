@@ -66,9 +66,10 @@ $yellow: #FFF500;
     grid-auto-rows: 184px;
   }
   @media screen and (max-width: 768px) {
-    grid-template-columns: repeat(2, 342px);
+    grid-template-columns: repeat(2, minmax(100px, 342px));
     grid-auto-rows: 368px;
     gap: 30px;
+    outline: 1px solid red;
   }
   &__item {
     display: grid;

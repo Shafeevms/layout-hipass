@@ -19,11 +19,17 @@
 
 .about {
   padding-top: 32px;
-  padding-bottom: 49px;
+  padding-bottom: 52px;
   background-color: #202020;
+  @media screen and (max-width: 1300px) {
+    padding-bottom: 113px;
+  }
+  @media screen and (max-width: 1300px) {
+    padding-bottom: 51px;
+  }
   @media screen and (max-width: 320px) {
     padding-top: 34px;
-    padding-bottom: 45px;
+    padding-bottom: 47px;
   }
   &__studio {
     @media screen and (max-width: 740px) {
@@ -75,6 +81,7 @@
     background: url('../public/img/about/pict1.webp') center center no-repeat;
     background-size: cover;
     @media screen and (max-width: 1300px) {
+      margin-bottom: 21px;
       height: 332px;
       background: url('../public/img/about/pic1024.webp') center center no-repeat;
     }
@@ -132,14 +139,16 @@
     }
     @media screen and (max-width: 1300px) {
       width: 342px;
+      padding-top: 18px;
+      padding-bottom: 14px;
+      height: auto;
     }
-    @media screen and (max-width: 1300px) {
+    @media screen and (max-width: 768px) {
       width: 100%;
     }
-    @media screen and (max-width: 1300px) {
-      padding-top: 12px;
-      padding-bottom: 10px;
-      height: auto;
+    @media screen and (max-width: 320px) {
+      padding-top: 8px;
+      padding-bottom: 12px;
     }
   }
   &__btn {

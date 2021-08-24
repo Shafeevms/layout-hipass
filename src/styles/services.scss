@@ -2,33 +2,40 @@ $orange: #FF6E30;
 $yellow: #FFF500;
 
 .services {
-  padding-top: 34px;
+  padding-top: 2px;
   padding-bottom: 40px;
   display: grid;
-  gap: 20px;
+  gap: 25px;
   grid-template-columns: 8fr 4fr;
   grid-template-areas: 'main aside';
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1350px) {
     padding-left: 31px;
     padding-right: 31px;
     grid-template-columns: 5fr 3fr;
-    gap: 29px;
+    gap: 15px;
   }
   @media screen and (max-width: 768px) {
-    padding-left: 21px;
-    padding-right: 21px;
+    padding-left: 28px;
+    padding-right: 28px;
     grid-template-columns: 1fr;
     grid-template-areas: 'main'
                           'aside';
+    gap: 34px;
   }
   @media screen and (max-width: 676px) {
     justify-items: center;
   }
+  @media screen and (max-width: 320px) {
+    padding-left: 21px;
+    padding-right: 21px;
+    gap: 85px;
+  }
   &__title {
-    margin-bottom: 9px;
+    margin-bottom: 16px;
     @include secondFont;
     font-size: 24px;
     @media screen and (max-width: 676px) {
+      margin-bottom: 10px;
       font-size: 18px;
     }
   }
@@ -36,16 +43,31 @@ $yellow: #FFF500;
     grid-area: main;
   }
   &__aside {
+    padding-top: 8px;
+    padding-left: 11px;
     grid-area: aside;
+    @media screen and (max-width: 1350px) {
+      padding-left: 13px;
+    }
+    @media screen and (max-width: 768px) {
+      padding-left: 0;
+    }
   }
   &__switcher {
     margin-bottom: 30px;
-    padding-bottom: 10px;
+    padding-bottom: 6px;
     display: flex;
     justify-content: space-between;
     max-width: 410px;
     border-bottom: 4px solid #C4C4C4;
+    @media screen and (max-width: 768px) {
+      max-width: 341px;
+    }
     @media screen and (max-width: 676px) {
+      max-width: 278px;
+    }
+    @media screen and (max-width: 320px) {
+      margin-bottom: 21px;
       max-width: 278px;
     }
   }
@@ -63,13 +85,16 @@ $yellow: #FFF500;
     &::after {
       content: '';
       position: absolute;
-      top: 28px;
+      top: 24px;
       left: 0;
       height: 4px;
       width: 100%;
       background-color: $orange;
       @media screen and (max-width: 676px) {
         top: 26px;
+      }
+      @media screen and (max-width: 320px) {
+        top: 22px;
       }
     }
   }
@@ -79,13 +104,14 @@ $yellow: #FFF500;
   display: grid;
   grid-auto-rows: 140px;
   gap: 25px;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1350px) {
     grid-auto-rows: 184px;
+    gap: 20px;
   }
   @media screen and (max-width: 768px) {
     grid-template-columns: repeat(2, minmax(100px, 342px));
-    grid-auto-rows: 368px;
-    gap: 30px;
+    grid-auto-rows: 325px;
+    gap: 30px 30px;
   }
   @media screen and (max-width: 676px) {
     grid-template-columns: 278px;
@@ -95,14 +121,14 @@ $yellow: #FFF500;
     display: grid;
     grid-auto-columns: 8fr;
     gap: 28px;
+    @media screen and (max-width: 1350px) {
+      gap: 6px;
+    }
     @media screen and (max-width: 768px) {
       grid-auto-columns: 1fr;
       grid-auto-rows: 184px 130px;
       gap: 14px;
     }
-    // @media screen and (max-width: 768px) {
-    //   grid-auto-rows: 184px 130px;
-    // }
   }
   &__img {
     width: 100%;
@@ -119,9 +145,17 @@ $yellow: #FFF500;
     }
   }
   &__wrapper {
-    padding-top: 20px;
+    padding-top: 16px;
     grid-column: 4 / 9;
+    @media screen and (max-width: 1350px) {
+      padding-top: 20px;
+    }
+    @media screen and (max-width: 1024px) {
+      padding-top: 28px;
+      padding-left: 24px;
+    }
     @media screen and (max-width: 768px) {
+      padding-left: 0;
       padding-top: 0;
       grid-column: 1 / 2;
     }
@@ -132,22 +166,33 @@ $yellow: #FFF500;
     font-size: 24px;
     font-weight: 400;
     @include secondFont;
+    @media screen and (max-width: 1350px) {
+      line-height: 18px;
+    }
+    @media screen and (max-width: 768px) {
+      line-height: 22px;
+    }
     @media screen and (max-width: 676px) {
       font-size: 16px;
     }
   }
   &__description {
-    margin-bottom: 11px;
+    margin-bottom: 14px;
     color: #999;
     line-height: 22px;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1350px) {
       overflow: hidden;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
     }
+    @media screen and (max-width: 768px) {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
     @media screen and (max-width: 676px) {
       font-size: 14px;
+      line-height: 18px;
     }
   }
   &__link {
@@ -158,7 +203,11 @@ $yellow: #FFF500;
       content: url('../public/img/icons/arrow-short.png');
       position: absolute;
       top: 3px;
-      left: 90px;
+      left: 87px;
+      @media screen and (max-width: 676px) {
+        top: 1px;
+        left: 77px;
+      }
     }
     &:hover {
       &::after {
@@ -183,7 +232,7 @@ $yellow: #FFF500;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 28px;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1350px) {
       grid-template-columns: 1fr;
       grid-auto-rows: 140px 90px;
       gap: 14px;
@@ -195,12 +244,12 @@ $yellow: #FFF500;
     }
   }
   &__img {
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1350px) {
       width: 280px;
       height: 140px;
       object-fit: cover;
     }
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1350px) {
       max-width: 342px;
       width: 100%;
       height: 172px;
@@ -235,19 +284,23 @@ $yellow: #FFF500;
 .aside {
   position: relative;
   &__hero {
-    margin-bottom: 30px;
+    margin-bottom: 33px;
     padding: 20px 30px 30px;
     height: 490px;
     background-image: url('../public/img/services/hero.webp');
     background-repeat: no-repeat;
     background-size: cover;
     @media screen and (max-width: 768px) {
+      margin-bottom: 21px;
       background-position-y: 35%;
       height: 336px;
     }
     @media screen and (max-width: 676px) {
       width: 278px;
       height: 422px;
+    }
+    @media screen and (max-width: 676px) {
+      margin-bottom: 24px;
     }
   }
   &__title-yellow {
@@ -261,7 +314,7 @@ $yellow: #FFF500;
   }
   &__descr-yellow {
     margin-bottom: 210px;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 700;
     color: $yellow;
     @media screen and (max-width: 768px) {
@@ -271,21 +324,29 @@ $yellow: #FFF500;
       margin-bottom: 240px;
       font-size: 14px;
     }
+    @media screen and (max-width: 320px) {
+      margin-bottom: 232px;
+    }
   }
   &__discount {
     margin-bottom: 9px;
     @media screen and (max-width: 768px) {
       position: absolute;
-      top: 20px;
-      right: 30px;
+      top: 27px;
+      right: 31px;
+      width: 117px;
+      height: 60px;
     }
-    @media screen and (max-width: 768px) {
-      width: 85px;
+    @media screen and (max-width: 320px) {
+      top: 33px;
+      right: 31px;
+      width: 84px;
       height: 43px;
     }
+
   }
   &__descr {
-    margin-bottom: 9px;
+    margin-bottom: 14px;
     max-width: 218px;
     color: #FFF;
     @media screen and (max-width: 676px) {
@@ -305,29 +366,37 @@ $yellow: #FFF500;
     font-size: 24px;
     color: #202020;
     @include secondFont;
+        top: 33px;
+    @media screen and (max-width: 676px) {
+      font-size: 18px;
+    }
   }
   &__list,
   &__list-add {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    @media screen and (max-width: 1024px) {
+    gap: 26px 30px;
+    @media screen and (max-width: 1350px) {
       grid-template-columns: repeat(3, 1fr);
-      gap: 21px 30px;
+      gap: 17px 30px;
     }
     @media screen and (max-width: 768px) {
       grid-template-columns: repeat(6, 1fr);
-      gap: 30px 5px;
+      gap: 27px 10px;
     }
     @media screen and (max-width: 676px) {
       grid-template-columns: repeat(2, 1fr);
       gap: 30px;
     }
+    @media screen and (max-width: 320px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 26px;
+    }
   }
   &__img {
     width: 80px;
     height: 60px;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1350px) {
         width: 94px;
         height: 71px;
     }

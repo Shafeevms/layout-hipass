@@ -1,17 +1,24 @@
 .projects {
   position: relative;
-  padding-top: 34px;
+  padding-top: 40px;
   padding-bottom: 40px;
   @media screen and (max-width: 1024px) {
     padding-left: 31px;
     padding-right: 31px;
   }
   @media screen and (max-width: 1024px) {
+    padding-left: 28px;
+  }
+  @media screen and (max-width: 676px) {
     padding-left: 21px;
     padding-right: 21px;
   }
+  @media screen and (max-width: 320px) {
+    padding-top: 35px;
+    padding-bottom: 30px;
+  }
   &__title {
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     @include secondFont;
     font-size: 24px;
     @media screen and (max-width: 676px) {
@@ -20,7 +27,10 @@
     }
   }
   &__slider {
-    margin-bottom: 55px;
+    margin-bottom: 48px;
+    @media screen and (max-width: 320px) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -31,14 +41,17 @@
   gap: 30px;
   @media screen and (max-width: 1024px) {
     grid-template-columns: repeat(8, 1fr);
+    gap: 26px 30px;
   }
   @media screen and (max-width: 768px) {
     grid-template-columns: repeat(6, 1fr);
+    gap: 28px 30px;
   }
   @media screen and (max-width: 676px) {
     grid-template-columns: 1fr;
     grid-template-rows: 877px 422px 295px 295px 422px;
     justify-items: center;
+    gap: 30px 22px;
   }
   &__list {
     grid-column: 1 / 3;
@@ -130,9 +143,10 @@
     background-image: url('../public/img/projects/pic9.webp');
   }
   &__text {
-    margin-bottom: 13px;
+    margin-bottom: 16px;
     line-height: 22px;
     @media screen and (max-width: 676px) {
+      margin-bottom: 9px;
       max-width: 276px;
     }
   }
@@ -140,11 +154,8 @@
     @media screen and (max-width: 1024px) {
       overflow: hidden;
       display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-    }
-    @media screen and (max-width: 676px) {
       -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
   }
   &__tag {
@@ -163,7 +174,7 @@
   &__block-big {
     position: relative;
     padding-bottom: 30px;
-    padding-top: 22px;
+    padding-top: 20px;
     padding-left: 30px;
     background-color: #cacaca;
     background-repeat: no-repeat;
@@ -305,12 +316,17 @@
 
   &__date-list {
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 0;
+    @media screen and (max-width: 1024px) {
+      bottom: 0;
+    }
   }
   &__date-white {
-    margin-bottom: 7px;
+    display: block;
+    // margin-bottom: 5px;
     font-size: 12px;
+    line-height: 25px;
     color: #fff;
     &::before {
       content: '';
@@ -326,7 +342,8 @@
     margin-bottom: 6px;
     @include secondFont;
     color: #fff;
-    max-width: 300px;
+    max-width: 290px;
+    line-height: 24px;
   }
   &__description {
     line-height: 22px;
@@ -340,7 +357,7 @@
   }
   &__btn {
     position: absolute;
-    padding: 15px 22px;
+    padding: 13px 19px;
     align-self: start;
     left: 30px;
     bottom: 30px;
@@ -371,6 +388,9 @@
     background-color: #cacaca;
     background-size: cover;
     background-repeat: no-repeat;
+    @media screen and (max-width: 1024px) {
+      max-width: 342px;
+    }
   }
   &__middle-img1 {
     background-image: url('../public/img/projects/pic4.webp');
@@ -390,7 +410,7 @@
   position: static;
   @media screen and (max-width: 676px) {
     position: absolute;
-    top: 35px;
+    top: 31px;
     right: 20px;
   }
 }
@@ -405,6 +425,9 @@
   &__list {
     display: flex;
     justify-content: center;
+    @media screen and (max-width: 676px) {
+      justify-content: flex-end;
+    }
   }
   &__item {
     display: flex;
@@ -413,8 +436,15 @@
     width: 30px;
     height: 30px;
     background-color: #c4c4c4;
+    @media screen and (max-width: 676px) {
+      height: 24px;
+      width: 24px;
+    }
   }
   &__item:not(:last-child) {
-    margin-right: 34px;
+    margin-right: 28px;
+    @media screen and (max-width: 676px) {
+      margin-right: 12px;
+    }
   }
 }

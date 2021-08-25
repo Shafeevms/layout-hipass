@@ -1,0 +1,108 @@
+.master {
+  padding-top: 40px;
+  padding-bottom: 70px;
+  background-color: #202020;
+  color: #fff;
+
+  &__title {
+    margin-bottom: 15px;
+    @include secondFont;
+    font-size: 24px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 'img descr shedule';
+    gap: 30px;
+  }
+
+  &__img {
+    grid-area: img;
+  }
+
+  &__descr {
+    grid-area: descr;
+  }
+
+  &__schedule {
+    grid-area: shedule;
+  }
+}
+
+.descr {
+
+  &__timeanddate {
+    margin-bottom: 7px;
+  }
+
+  &__date,
+  &__time {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 12px;
+  }
+
+  &__date {
+    &::before {
+      margin-right: 5px;
+      content: url('../public/img/icons/calendar-white.svg');
+    }
+  }
+
+  &__time {
+    &::before {
+      margin-right: 5px;
+      content: url('../public/img/icons/clock.svg');
+    }
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    @include secondFont;
+    font-size: 24px;
+  }
+
+  &__text {
+    margin-bottom: 65px;
+    @include secondFont;
+    color: #cacaca;
+    line-height: 28px;
+  }
+
+  &__btn {
+    @include orange_btn;
+    &:hover {
+      background-color: #BC572B;
+    }
+    &:focus {
+      outline: 3px solid #CE4307;
+    }
+    &:active {
+      background-color: #CE4307;
+    }
+  }
+}
+
+.schedule {
+  display: grid;
+
+
+  &__item {
+  }
+
+  &__img {
+  }
+
+  &__wrapper {
+  }
+
+  &__timeanddate {
+  }
+}
+
+.shedule {
+
+  &__title {
+  }
+}

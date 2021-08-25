@@ -91,9 +91,6 @@ $yellow: #FFF500;
       width: 100%;
       background-color: $orange;
       @media screen and (max-width: 676px) {
-        top: 26px;
-      }
-      @media screen and (max-width: 320px) {
         top: 22px;
       }
     }
@@ -359,6 +356,15 @@ $yellow: #FFF500;
     @include orange_btn;
     @media screen and (max-width: 676px) {
       font-size: 14px;
+    }
+    &:hover {
+      background-color: #BC572B;
+    }
+    &:focus {
+      outline: 3px solid #CE4307;
+    }
+    &:active {
+      background-color: #CE4307;
     }
   }
   &__title {

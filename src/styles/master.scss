@@ -5,7 +5,7 @@
   color: #fff;
 
   &__title {
-    margin-bottom: 15px;
+    margin-bottom: 19px;
     @include secondFont;
     font-size: 24px;
   }
@@ -31,21 +31,22 @@
 }
 
 .descr {
-
+  padding-top: 18px;
   &__timeanddate {
     margin-bottom: 7px;
   }
 
   &__date,
   &__time {
+    margin-bottom: 0;
     display: inline-block;
-    margin-right: 20px;
     font-size: 12px;
   }
 
   &__date {
+    margin-right: 14px;
     &::before {
-      margin-right: 5px;
+      margin-right: 3px;
       content: url('../public/img/icons/calendar-white.svg');
     }
   }
@@ -58,13 +59,14 @@
   }
 
   &__title {
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     @include secondFont;
     font-size: 24px;
+    font-weight: 400;
   }
 
   &__text {
-    margin-bottom: 65px;
+    margin-bottom: 63px;
     @include secondFont;
     color: #cacaca;
     line-height: 28px;
@@ -85,24 +87,29 @@
 }
 
 .schedule {
-  display: grid;
-
 
   &__item {
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    display: flex;
   }
 
   &__img {
+    margin-right: 15px;
   }
 
   &__wrapper {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
 
   &__timeanddate {
   }
-}
-
-.shedule {
 
   &__title {
+    @include secondFont;
+    font-weight: 400;
   }
 }

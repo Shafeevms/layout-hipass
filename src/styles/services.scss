@@ -9,12 +9,14 @@ $yellow: #FFF500;
   grid-template-columns: 8fr 4fr;
   grid-template-areas: 'main aside';
   @media screen and (max-width: 1350px) {
+    padding-bottom: 37px;
     padding-left: 31px;
     padding-right: 31px;
     grid-template-columns: 5fr 3fr;
     gap: 15px;
   }
   @media screen and (max-width: 768px) {
+    padding-bottom: 34px;
     padding-left: 28px;
     padding-right: 28px;
     grid-template-columns: 1fr;

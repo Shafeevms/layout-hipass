@@ -7,6 +7,10 @@
     margin-bottom: 17px;
     padding-top: 42px;
   }
+  @media screen and (max-width: 320px) {
+    padding-top: 25px;
+    padding-bottom: 58px;
+  }
 
   &__title {
     margin-bottom: 19px;
@@ -14,6 +18,10 @@
     font-size: 24px;
     @media screen and (max-width: 1350px) {
       padding-left: 31px;
+    }
+    @media screen and (max-width: 320px) {
+      padding-left: 20px;
+      font-size: 18px;
     }
   }
 
@@ -34,6 +42,17 @@
       padding-left: 27px;
       padding-right: 27px;
     }
+    @media screen and (max-width: 676px) {
+      grid-template-columns: 1fr;
+      grid-template-areas: 'img'
+                            'descr'
+                            'shedule';
+    }
+    @media screen and (max-width: 768px) {
+      padding-left: 22px;
+      padding-right: 22px;
+      gap: 3px;
+    }
   }
 
   &__img {
@@ -44,6 +63,10 @@
     }
     @media screen and (max-width: 768px) {
       height: 330px;
+    }
+    @media screen and (max-width: 768px) {
+      height: 264px;
+      object-fit: cover;
     }
   }
 
@@ -58,8 +81,14 @@
 
 .descr {
   padding-top: 18px;
+  @media screen and (max-width: 768px) {
+      padding-top: 15px;
+  }
   &__timeanddate {
     margin-bottom: 7px;
+    @media screen and (max-width: 320px) {
+      margin-bottom: 9px;
+    }
   }
 
   &__date,
@@ -89,6 +118,10 @@
     @include secondFont;
     font-size: 24px;
     font-weight: 400;
+    @media screen and (max-width: 320px) {
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
   }
 
   &__text {
@@ -101,6 +134,13 @@
     }
     @media screen and (max-width: 975px) {
       margin-bottom: 15px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-bottom: 21px;
+    }
+    @media screen and (max-width: 320px) {
+      font-size: 14px;
+      line-height: 25px;
     }
   }
 
@@ -125,6 +165,13 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px 30px;
   }
+  @media screen and (max-width: 676px) {
+    grid-template-columns: 1fr;
+  }
+  @media screen and (max-width: 320px) {
+    padding-top: 44px;
+    gap: 30px;
+  }
   &__item {
     &:not(:last-child) {
         margin-bottom: 30px;
@@ -148,6 +195,9 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 320px) {
+      justify-content: flex-start;
+    }
   }
 
   &__timeanddate {

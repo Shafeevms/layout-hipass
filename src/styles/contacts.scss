@@ -1,0 +1,132 @@
+.section-contacts {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__title {
+    margin-bottom: 27px;
+    @include secondFont;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 850px 410px;
+    grid-template-rows: 460px;
+    gap: 30px;
+  }
+
+  &__map {
+    position: relative;
+    background: url('../public/img/map/map.webp');
+    &::after {
+      content: url('../public/img/icons/Ellipse-map.svg');
+      position: absolute;
+      top: 20px;
+      right: 50px;
+    }
+  }
+
+  &__slat {
+  }
+
+  &__form {
+  }
+}
+
+.slat {
+  padding-top: 172px;
+  padding-left: 60px;
+  padding-right: 56px;
+
+  position: relative;
+  width: 410px;
+  height: 100%;
+
+  background: rgba(32, 32, 32, 0.85);
+
+  &_address {
+    margin-bottom: 5px;
+    color: #cacaca;
+    line-height: 28px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 19px;
+    right: 25px;
+    height: 20px;
+    width: 20px;
+    border: none;
+    background-color: transparent;
+  }
+
+  &__title {
+    margin-bottom: 3px;
+    @include secondFont;
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  &__tel {
+    padding-left: 23px;
+    position: relative;
+    @include secondFont;
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+    &::before {
+      content: url('../public/img/icons/phone.svg');
+      position: absolute;
+      left: 2px;
+    }
+  }
+}
+.form {
+
+  &__title {
+    @include secondFont;
+    font-weight: 400;
+  }
+
+  &__text {
+    margin-bottom: 8px;
+    color: #999;
+    line-height: 22px;
+  }
+
+  &__form {
+  }
+
+  &__input {
+    margin-bottom: 22px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 23px;
+    padding-right: 23px;
+    max-width: 410px;
+    width: 100%;
+    border: none;
+    background-color: #e9e9e9;
+  }
+
+  &__textarea {
+    margin-bottom: 19px;
+    padding-top: 15px;
+    padding-left: 23px;
+    padding-right: 23px;
+    max-width: 410px;
+    min-width: 410px;
+    max-height: 150px;
+    min-height: 150px;
+    border: none;
+    background-color: #e9e9e9;
+  }
+
+  &__btn {
+    display: inline-block;
+    @include orange_btn;
+  }
+}
+

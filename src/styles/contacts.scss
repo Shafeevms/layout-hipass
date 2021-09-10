@@ -11,14 +11,17 @@
 
   &__container {
     display: grid;
-    grid-template-columns: 850px 410px;
+    grid-template-columns: 8fr 4fr;
     grid-template-rows: 460px;
     gap: 30px;
   }
 
   &__map {
     position: relative;
-    background: url('../public/img/map/map.webp');
+    display: grid;
+    grid-template-columns: 1fr 1rf;
+    gap: 30px;
+    background-image: url('../public/img/map/map.webp');
     &::after {
       content: url('../public/img/icons/Ellipse-map.svg');
       position: absolute;
@@ -35,6 +38,8 @@
 }
 
 .slat {
+  grid-column: 1 / 2;
+
   padding-top: 172px;
   padding-left: 60px;
   padding-right: 56px;

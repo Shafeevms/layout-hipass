@@ -4,8 +4,11 @@
   background-color: #202020;
   color: #fff;
   @media screen and (max-width: 1350px) {
-    margin-bottom: 17px;
+    padding-bottom: 17px;
     padding-top: 42px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-bottom: 128px;
   }
   @media screen and (max-width: 320px) {
     padding-top: 25px;

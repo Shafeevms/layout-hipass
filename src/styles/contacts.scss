@@ -18,11 +18,22 @@
     padding-right: 27px;
   }
 
+  @media screen and (max-width: 450px) {
+    padding-top: 35px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   &__title {
     margin-bottom: 27px;
     @include secondFont;
     font-size: 24px;
     font-weight: 700;
+
+    @media screen and (max-width: 450px) {
+      padding-left: 22px;
+      font-size: 18px;
+    }
   }
 
   &__container {
@@ -49,6 +60,11 @@
     @media screen and (max-width: 1350px) {
       grid-template-rows: 303px 157px;
     }
+
+    @media screen and (max-width: 450px) {
+      grid-template-rows: 302px 157px;
+    }
+
     &::after {
       content: url('../public/img/icons/Ellipse-map.svg');
       position: absolute;
@@ -96,6 +112,12 @@
     padding-top: 20px;
   }
 
+  @media screen and (max-width: 320px) {
+    padding-top: 27px;
+    padding-left: 20px;
+    padding-right: 30px;
+  }
+
   &_address {
     margin-bottom: 5px;
     color: #cacaca;
@@ -105,12 +127,14 @@
       max-width: 293px;
     }
 
-    @media screen and (max-width: 1024px) {
-
-    }
-
     @media screen and (max-width: 768px) {
       max-width: 420px;
+    }
+
+    @media screen and (max-width: 320px) {
+      transform: translateY(7px);
+      font-size: 14px;
+      line-height: 21px;
     }
   }
 
@@ -133,6 +157,10 @@
 
     @media screen and (max-width: 768px) {
       margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 450px) {
+      font-size: 18px;
     }
   }
 
@@ -160,6 +188,12 @@
       left: 28px;
     }
 
+    @media screen and (max-width: 768px) {
+      bottom: 16px;
+      left:16px;
+      font-size: 14px;
+    }
+
     &::before {
       content: url('../public/img/icons/phone.svg');
       position: absolute;
@@ -172,9 +206,19 @@
 }
 .form {
 
+  @media screen and (max-width: 320px) {
+    padding-top: 10px;
+  }
+
   &__title {
     @include secondFont;
     font-weight: 400;
+
+    @media screen and (max-width: 320px) {
+      margin-bottom: 5px;
+      padding-left: 20px;
+      font-size: 18px;
+    }
   }
 
   &__text {
@@ -186,12 +230,24 @@
       margin-bottom: 19px;
       max-width: 450px;
     }
+
+    @media screen and (max-width: 320px) {
+      margin-bottom: 14px;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 
   &__form {
     @media screen and (max-width: 910px) {
       display: flex;
       flex-direction: column;
+    }
+
+    @media screen and (max-width: 320px) {
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
   }
@@ -209,6 +265,13 @@
 
     @media screen and (max-width: 768px) {
       max-width: 466px;
+    }
+
+    @media screen and (max-width: 320px) {
+      padding-top: 12px;
+      padding-bottom: 11px;
+      max-width: 320px;
+      font-size: 14px;
     }
   }
 
@@ -233,7 +296,11 @@
     @media screen and (max-width: 768px) {
       margin-bottom: 16px;
       max-width: 466px;
-      min-width: 320px;
+      min-width: 270px;
+    }
+    @media screen and (max-width: 320px) {
+      padding-top: 11px;
+      font-size: 14px;
     }
   }
 

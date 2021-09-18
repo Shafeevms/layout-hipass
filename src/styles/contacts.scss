@@ -35,7 +35,7 @@
       grid-template-columns: 5fr 3fr;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 910px) {
       grid-template-columns: 1fr;
     }
   }
@@ -102,12 +102,11 @@
     line-height: 28px;
 
     @media screen and (max-width: 1350px) {
-      display: inline;
       max-width: 293px;
     }
 
     @media screen and (max-width: 1024px) {
-      display: inline-block;
+
     }
 
     @media screen and (max-width: 768px) {
@@ -152,7 +151,7 @@
 
     @media screen and (max-width: 1350px) {
       position: absolute;
-      bottom: 30px;
+      bottom: 25px;
       left: 120px;
     }
 
@@ -165,6 +164,9 @@
       content: url('../public/img/icons/phone.svg');
       position: absolute;
       left: 2px;
+      @media screen and (max-width: 1350px) {
+        content: url('../public/img/icons/phone-orange.svg');
+      }
     }
   }
 }
@@ -187,6 +189,11 @@
   }
 
   &__form {
+    @media screen and (max-width: 910px) {
+      display: flex;
+      flex-direction: column;
+    }
+
   }
 
   &__input {
@@ -226,13 +233,14 @@
     @media screen and (max-width: 768px) {
       margin-bottom: 16px;
       max-width: 466px;
-      min-width: 466px;
+      min-width: 320px;
     }
   }
 
   &__btn {
     display: inline-block;
     @include orange_btn;
+    align-self: flex-start;
 
     @media screen and (max-width: 768px) {
       display: block;

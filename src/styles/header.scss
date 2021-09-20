@@ -95,14 +95,18 @@
     }
   }
   &__contacts:focus {
-    color: #FF6E30;
+    // color: #FF6E30;
+    color: #fff;
+    background-color: #BC572B;
+    outline: none;
   }
   &__contacts:hover {
     color: #FF6E30;
   }
   &__contacts:active {
     color: #fff;
-    background-color: #BC572B;
+    // background-color: #BC572B;
+    background-color: #CE4307;
   }
   &__contacts-768 {
     grid-area: contacts-768;
@@ -308,6 +312,7 @@
     white-space: pre;
     transform: translateX(-8px);
     color: inherit;
+    outline: none;
     @media screen and (max-width: 1300px) {
       font-size: 14px;
       letter-spacing: 1.5px;

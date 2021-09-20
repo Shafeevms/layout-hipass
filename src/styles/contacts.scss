@@ -310,6 +310,15 @@
     display: inline-block;
     @include orange_btn;
     align-self: flex-start;
+    &:hover {
+      background-color: #BC572B;
+    }
+    &:focus {
+      outline: 3px solid #CE4307;
+    }
+    &:active {
+      background-color: #CE4307;
+    }
 
     @media screen and (max-width: 768px) {
       display: block;

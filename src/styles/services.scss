@@ -78,9 +78,26 @@ $yellow: #FFF500;
     font-size: 16px;
     font-weight: 700;
     color: #666;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
     @media screen and (max-width: 676px) {
       font-size: 14px;
     }
+  }
+  &__switcher_name:focus {
+    // color: #FF6E30;
+    color: #fff;
+    background-color: #BC572B;
+    outline: none;
+  }
+  &__switcher_name:hover {
+    color: #FF6E30;
+  }
+  &__switcher_name:active {
+    color: #fff;
+    // background-color: #BC572B;
+    background-color: #CE4307;
   }
   &__switcher_name-active {
     position: relative;
@@ -88,7 +105,7 @@ $yellow: #FFF500;
     &::after {
       content: '';
       position: absolute;
-      top: 24px;
+      top: 26px;
       left: 0;
       height: 4px;
       width: 100%;

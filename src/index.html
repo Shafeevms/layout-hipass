@@ -327,10 +327,6 @@
         </div>
       </div>
       <div class="projects__pagination pagination swiper-pagination">
-        <ul class="pagination__list">
-          <li class="pagination__item">1</li>
-          <li class="pagination__item">2</li>
-        </ul>
       </div>
     </section>
     <section class="services container">
@@ -653,25 +649,29 @@
     </div>
   </footer>
   <script src="./public/js/swiper-bundle.min.js"></script>
-  <script src="./public/js/swiper-bundle.min.js.map"></script>
   <script>
     const swiper = new Swiper('.swiper-container', {
       direction: 'horizontal',
       loop: true,
       spaceBetween: 30,
-      hashNavigation: true,
 
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
-        type: 'custom',
+        renderBullet: function (index, className) {
+          return '<span class="' + className + ' pagination__item' + '">' + (index + 1) + "</span>";
+        },
       },
     });
-    // document.querySelector('.pagination').addEventListener('click', (e) => {
-    //   e.preventDefault();
-    //   console.log(e.target.textContent)
-    //   console.log(location.hash.slice(1))
-    // })
+  </script>
+  <script>
+    const switcher = document.querySelector('.services__switcher');
+    const switch_btn = document.querySelector('.services__switcher_name');
+    switcher.addEventListener('click', (e) => {
+      if (e.target.className === 'services__switcher_name' && !e.target.classList.contains('services__switcher_name-active'))
+      document.querySelectorAll('.services__switcher_name').forEach(el => el.classList.remove('services__switcher_name-active'));
+      e.target.classList.add('services__switcher_name-active');
+    })
   </script>
 </body>
 

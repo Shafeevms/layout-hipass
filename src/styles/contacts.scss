@@ -274,6 +274,16 @@
       outline: 1px solid #FF6E30;
     }
 
+    &:hover::-webkit-input-placeholder {
+      color: #FF6E30;
+    }
+    &:hover:-moz-placeholder {
+      color: #FF6E30;
+    }
+    &:focus {
+      outline: 1px solid #FF6E30;
+    }
+
     @media screen and (max-width: 768px) {
       max-width: 466px;
     }
@@ -297,6 +307,16 @@
     min-height: 150px;
     border: none;
     background-color: #e9e9e9;
+    &:hover::-webkit-input-placeholder {
+      color: #FF6E30;
+    }
+    &:hover:-moz-placeholder {
+      color: #FF6E30;
+    }
+    &:focus {
+      outline: 1px solid #FF6E30;
+    }
+
     &:hover::-webkit-input-placeholder {
       color: #FF6E30;
     }

@@ -667,11 +667,23 @@
   <script>
     const switcher = document.querySelector('.services__switcher');
     const switch_btn = document.querySelector('.services__switcher_name');
+    const main_list = document.querySelector('.main-list');
+    const add_list = document.querySelector('.add-list');
+    const aside = document.querySelector('.aside__list');
+    const aside_add = document.querySelector('.aside__list-add');
+    const close_btn = document.querySelector('.slat__close');
+    const slat = document.querySelector('.slat');
+
     switcher.addEventListener('click', (e) => {
       if (e.target.className === 'services__switcher_name' && !e.target.classList.contains('services__switcher_name-active'))
-      document.querySelectorAll('.services__switcher_name').forEach(el => el.classList.remove('services__switcher_name-active'));
-      e.target.classList.add('services__switcher_name-active');
-    })
+      document.querySelectorAll('.services__switcher_name').forEach(el => el.classList.toggle('services__switcher_name-active'));
+      main_list.classList.toggle('d-none');
+      add_list.classList.toggle('d-none');
+      aside.classList.toggle('d-none');
+      aside_add.classList.toggle('d-none');
+    });
+
+    close_btn.addEventListener('click', () => slat.classList.add('d-none'));
   </script>
 </body>
 

@@ -78,30 +78,26 @@ $yellow: #FFF500;
     font-size: 16px;
     font-weight: 700;
     color: #666;
-<<<<<<< HEAD
-=======
     background-color: transparent;
     border: none;
->>>>>>> c62d65648a02d0659909aa017798fd5b32a17d8f
     cursor: pointer;
     @media screen and (max-width: 676px) {
       font-size: 14px;
     }
   }
   &__switcher_name:focus {
-    // color: #FF6E30;
-    color: #fff;
-    background-color: #BC572B;
+    color: #666;
+    background-color: #FFD4C1;
     outline: none;
   }
   &__switcher_name:hover {
     color: #FF6E30;
   }
-  &__switcher_name:active {
-    color: #fff;
-    // background-color: #BC572B;
-    background-color: #CE4307;
+  &__switcher_name:visited {
+    color: #FF6E30;
+    background-color: transparent;
   }
+
   &__switcher_name-active {
     position: relative;
     color: $orange;

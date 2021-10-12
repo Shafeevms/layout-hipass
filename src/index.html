@@ -15,8 +15,9 @@
 
 <body class="body">
   <header class="header">
+    <div class="header__bottom-font"></div>
     <div class="container header__container">
-      <img src="./public/img/logo.png" alt="логотип" class="header__logo">
+      <img src="./public/img/logo1.png" alt="логотип" class="header__logo">
       <navigation class="header__nav nav">
         <ul class="nav__list">
           <li class="nav__item"><a href="#" class="nav__link">О студии</a></li>
@@ -95,7 +96,7 @@
             fill="#BCBCBC" />
         </svg>
       </button>
-      <button class="header__burger">
+      <button class="header__burger-btn">
         <svg class="header__burger-svg" width="20" height="18" viewbox="0 0 20 18" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <rect width="20" height="2" fill="white" />
@@ -103,6 +104,29 @@
           <rect y="16" width="10" height="2" fill="white" />
         </svg>
       </button>
+      <div class="header__burger burger d-none">
+        <button class="burger__button burger__close">
+          <img src="./public/img/icons/button-close.png" alt="закрыть меню" class="burger__close">
+        </button>
+        <ul class="burger__nav">
+          <li class="burger__item"><a class="burger__link">О студии</a></li>
+          <li class="burger__item"><a class="burger__link">Наши проекты</a></li>
+          <li class="burger__item"><a class="burger__link">Услуги</a></li>
+          <li class="burger__item"><a class="burger__link">Мастер-классы</a></li>
+          <li class="burger__item"><a class="burger__link">Контакты</a></li>
+        </ul>
+        <div class="header__contacts contacts" tabindex="1">
+          <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="contacts__logo">
+            <g opacity="0.7">
+              <path
+                d="M18.3425 14.0983C17.215 14.0983 16.1242 13.915 15.1067 13.585C14.7858 13.475 14.4283 13.5575 14.1808 13.805L12.7417 15.6108C10.1475 14.3733 7.71833 12.0358 6.42583 9.35L8.21333 7.82833C8.46083 7.57167 8.53417 7.21417 8.43333 6.89333C8.09417 5.87583 7.92 4.785 7.92 3.6575C7.92 3.1625 7.5075 2.75 7.0125 2.75H3.84083C3.34583 2.75 2.75 2.97 2.75 3.6575C2.75 12.1733 9.83583 19.25 18.3425 19.25C18.9933 19.25 19.25 18.6725 19.25 18.1683V15.0058C19.25 14.5108 18.8375 14.0983 18.3425 14.0983Z"
+                fill="currentColor" />
+            </g>
+          </svg>
+          <a href="tel:+749542423532" class="contacts__tel" tabindex="-1">+7 (495) 42-423-532</a>
+        </div>
+      </div>
     </div>
   </header>
   <!-- <header class="header">
@@ -764,6 +788,9 @@
     const aside_add = document.querySelector('.aside__list-add');
     const close_btn = document.querySelector('.slat__close');
     const slat = document.querySelector('.slat');
+    const burger__open = document.querySelector('.header__burger-btn');
+    const burger = document.querySelector('.burger');
+    const burger__close = document.querySelector('.burger__close');
 
     switcher.addEventListener('click', (e) => {
       if (e.target.className === 'services__switcher_name' && !e.target.classList.contains('services__switcher_name-active'))
@@ -775,6 +802,16 @@
     });
 
     close_btn.addEventListener('click', () => slat.classList.add('d-none'));
+
+    burger__open.addEventListener('click', () => {
+      burger.classList.remove('d-none');
+    });
+
+    burger__close.addEventListener('click', () => {
+      burger.classList.add('d-none');
+    });
+
+
   </script>
 </body>
 

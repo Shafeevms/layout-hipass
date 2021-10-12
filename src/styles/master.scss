@@ -152,6 +152,7 @@
 
   &__btn {
     display: inline-block;
+    transition: all .4s ease;
     @include orange_btn;
     &:hover {
       background-color: #BC572B;

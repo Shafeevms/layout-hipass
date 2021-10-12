@@ -81,6 +81,7 @@ $yellow: #FFF500;
     background-color: transparent;
     border: none;
     cursor: pointer;
+    transition: all .4s ease;
     @media screen and (max-width: 676px) {
       font-size: 14px;
     }
@@ -373,6 +374,7 @@ $yellow: #FFF500;
   &__btn {
     display: inline-block;
     @include orange_btn;
+    transition: all .4s ease;
     @media screen and (max-width: 676px) {
       font-size: 14px;
     }
